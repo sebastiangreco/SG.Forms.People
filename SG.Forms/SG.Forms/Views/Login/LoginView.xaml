@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SG.Forms.Views.LoginView"
+             xmlns:Common="clr-namespace:SG.Forms.Config" 
+             xmlns:viewModelBase="clr-namespace:SG.Forms.ViewModels"             
+             viewModelBase:ViewModelLocator.AutoWireViewModel="true" 
+             BackgroundImage="{x:Static Common:CommonResources.BackgroundImagePath}" >
+  
+    <ContentPage.Content>
+        <Grid
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="0"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.Padding>
+                <OnPlatform x:TypeArguments="Thickness"
+                            Android="20"
+                            iOS="20"/>
+            </Grid.Padding>
+
+            <!-- LOGO -->
+            <Image 
+                Grid.Row="0"
+                HorizontalOptions="CenterAndExpand"
+                BackgroundColor="Transparent"                
+                Source="{x:Static Common:CommonResources.LogoImagePath}" 
+                HeightRequest="150"                     
+                VerticalOptions="Center" />
+
+
+            <Grid
+                Grid.Row="2"
+                HorizontalOptions="FillAndExpand">
+
+                
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
